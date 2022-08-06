@@ -1,0 +1,26 @@
+PODS:
+  - FSCalendar (2.8.4)
+  - Realm (10.28.4):
+    - Realm/Headers (= 10.28.4)
+  - Realm/Headers (10.28.4)
+  - RealmSwift (10.28.4):
+    - Realm (= 10.28.4)
+
+DEPENDENCIES:
+  - FSCalendar
+  - RealmSwift (~> 10)
+
+SPEC REPOS:
+  trunk:
+    - FSCalendar
+    - Realm
+    - RealmSwift
+
+SPEC CHECKSUMS:
+  FSCalendar: 2d1d0d9398f12d439f55c1fe0f01525b151b8260
+  Realm: 8ab5176275b4123e84383b33385d47f09507acac
+  RealmSwift: 0851105ca8c6d5722678c98e4d4e53637d1704c8
+
+PODFILE CHECKSUM: 1b5fc83552e22efcccb9c7aa03b04b8c78243cea
+
+COCOAPODS: 1.11.3

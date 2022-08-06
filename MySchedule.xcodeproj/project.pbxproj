@@ -7,21 +7,79 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D75091CFADC881820516A160 /* Pods_MySchedule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0A4CF1DE2280597F0B07191 /* Pods_MySchedule.framework */; };
+		EF24B592289D09F700C937E0 /* AddContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF24B591289D09F700C937E0 /* AddContactTableViewController.swift */; };
+		EF24B594289D161C00C937E0 /* AlertPhotoCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF24B593289D161C00C937E0 /* AlertPhotoCamera.swift */; };
+		EF24B597289D210F00C937E0 /* ScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF24B596289D210F00C937E0 /* ScheduleModel.swift */; };
+		EF24B59A289D223300C937E0 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF24B599289D223300C937E0 /* RealmManager.swift */; };
+		EF24B59C289D2DFA00C937E0 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF24B59B289D2DFA00C937E0 /* UIColor.swift */; };
+		EF24B59E289D368700C937E0 /* AlertOk.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF24B59D289D368700C937E0 /* AlertOk.swift */; };
+		EF24B5A0289D734600C937E0 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF24B59F289D734600C937E0 /* TaskModel.swift */; };
+		EF24B5A2289D7CD000C937E0 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF24B5A1289D7CD000C937E0 /* Date.swift */; };
+		EF24B5A4289DCD4800C937E0 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF24B5A3289DCD4800C937E0 /* ContactModel.swift */; };
 		EF6714252837E4B400BA13C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6714242837E4B400BA13C2 /* AppDelegate.swift */; };
 		EF6714272837E4B400BA13C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6714262837E4B400BA13C2 /* SceneDelegate.swift */; };
-		EF6714292837E4B400BA13C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6714282837E4B400BA13C2 /* ViewController.swift */; };
+		EF6714292837E4B400BA13C2 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6714282837E4B400BA13C2 /* MainTabBarController.swift */; };
 		EF67142E2837E4B600BA13C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF67142D2837E4B600BA13C2 /* Assets.xcassets */; };
 		EF6714312837E4B600BA13C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF67142F2837E4B600BA13C2 /* LaunchScreen.storyboard */; };
+		EF67143E2837EBA000BA13C2 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF67143D2837EBA000BA13C2 /* ScheduleViewController.swift */; };
+		EF6714402837EBBC00BA13C2 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF67143F2837EBBC00BA13C2 /* TasksViewController.swift */; };
+		EF6714422837EBD300BA13C2 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6714412837EBD300BA13C2 /* ContactsViewController.swift */; };
+		EF8B7E7B2899619C00601ED1 /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B7E7A2899619C00601ED1 /* ScheduleTableViewCell.swift */; };
+		EF8B7E83289A878700601ED1 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B7E82289A878700601ED1 /* UIStackView.swift */; };
+		EF8B7E85289A94D300601ED1 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B7E84289A94D300601ED1 /* UILabel.swift */; };
+		EF8B7E87289A96EF00601ED1 /* TasksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B7E86289A96EF00601ED1 /* TasksTableViewCell.swift */; };
+		EF8B7E8A289A9C1E00601ED1 /* TapButtonProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B7E89289A9C1E00601ED1 /* TapButtonProtocols.swift */; };
+		EF8B7E8F289AA23A00601ED1 /* AddScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B7E8E289AA23A00601ED1 /* AddScheduleTableViewController.swift */; };
+		EF8B7E93289AA5BD00601ED1 /* AddTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B7E92289AA5BD00601ED1 /* AddTableViewCell.swift */; };
+		EF8B7E95289AAFE600601ED1 /* HeaderAddTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B7E94289AAFE600601ED1 /* HeaderAddTableViewCell.swift */; };
+		EF8B7E98289BD8A400601ED1 /* AlertDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B7E97289BD8A400601ED1 /* AlertDate.swift */; };
+		EF8B7E9A289BF5B300601ED1 /* AlertTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B7E99289BF5B300601ED1 /* AlertTime.swift */; };
+		EF8B7E9C289BF81D00601ED1 /* AlertCellName.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B7E9B289BF81D00601ED1 /* AlertCellName.swift */; };
+		EF8B7E9E289BFC7B00601ED1 /* ScheduleChooseColorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B7E9D289BFC7B00601ED1 /* ScheduleChooseColorTableViewController.swift */; };
+		EF8B7EA0289C02B800601ED1 /* ScheduleColorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B7E9F289C02B800601ED1 /* ScheduleColorTableViewCell.swift */; };
+		EF8B7EA4289C04D800601ED1 /* AddTaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B7EA3289C04D800601ED1 /* AddTaskTableViewController.swift */; };
+		EF8B7EAB289C0D4200601ED1 /* ContactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B7EAA289C0D4200601ED1 /* ContactsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		49481AA14678A83867B5DA7F /* Pods-MySchedule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySchedule.debug.xcconfig"; path = "Target Support Files/Pods-MySchedule/Pods-MySchedule.debug.xcconfig"; sourceTree = "<group>"; };
+		56CDAB3FBD914A62855405FC /* Pods-MySchedule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySchedule.release.xcconfig"; path = "Target Support Files/Pods-MySchedule/Pods-MySchedule.release.xcconfig"; sourceTree = "<group>"; };
+		EF24B591289D09F700C937E0 /* AddContactTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactTableViewController.swift; sourceTree = "<group>"; };
+		EF24B593289D161C00C937E0 /* AlertPhotoCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPhotoCamera.swift; sourceTree = "<group>"; };
+		EF24B596289D210F00C937E0 /* ScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleModel.swift; sourceTree = "<group>"; };
+		EF24B599289D223300C937E0 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		EF24B59B289D2DFA00C937E0 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		EF24B59D289D368700C937E0 /* AlertOk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertOk.swift; sourceTree = "<group>"; };
+		EF24B59F289D734600C937E0 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		EF24B5A1289D7CD000C937E0 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		EF24B5A3289DCD4800C937E0 /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
 		EF6714212837E4B400BA13C2 /* MySchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF6714242837E4B400BA13C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF6714262837E4B400BA13C2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EF6714282837E4B400BA13C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EF6714282837E4B400BA13C2 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		EF67142D2837E4B600BA13C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF6714302837E4B600BA13C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF6714322837E4B600BA13C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF67143D2837EBA000BA13C2 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		EF67143F2837EBBC00BA13C2 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+		EF6714412837EBD300BA13C2 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		EF8B7E7A2899619C00601ED1 /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
+		EF8B7E82289A878700601ED1 /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
+		EF8B7E84289A94D300601ED1 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		EF8B7E86289A96EF00601ED1 /* TasksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewCell.swift; sourceTree = "<group>"; };
+		EF8B7E89289A9C1E00601ED1 /* TapButtonProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapButtonProtocols.swift; sourceTree = "<group>"; };
+		EF8B7E8E289AA23A00601ED1 /* AddScheduleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScheduleTableViewController.swift; sourceTree = "<group>"; };
+		EF8B7E92289AA5BD00601ED1 /* AddTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTableViewCell.swift; sourceTree = "<group>"; };
+		EF8B7E94289AAFE600601ED1 /* HeaderAddTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderAddTableViewCell.swift; sourceTree = "<group>"; };
+		EF8B7E97289BD8A400601ED1 /* AlertDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDate.swift; sourceTree = "<group>"; };
+		EF8B7E99289BF5B300601ED1 /* AlertTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTime.swift; sourceTree = "<group>"; };
+		EF8B7E9B289BF81D00601ED1 /* AlertCellName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCellName.swift; sourceTree = "<group>"; };
+		EF8B7E9D289BFC7B00601ED1 /* ScheduleChooseColorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleChooseColorTableViewController.swift; sourceTree = "<group>"; };
+		EF8B7E9F289C02B800601ED1 /* ScheduleColorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleColorTableViewCell.swift; sourceTree = "<group>"; };
+		EF8B7EA3289C04D800601ED1 /* AddTaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskTableViewController.swift; sourceTree = "<group>"; };
+		EF8B7EAA289C0D4200601ED1 /* ContactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewCell.swift; sourceTree = "<group>"; };
+		F0A4CF1DE2280597F0B07191 /* Pods_MySchedule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MySchedule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +87,55 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D75091CFADC881820516A160 /* Pods_MySchedule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0788117AE874E10725F3CDA2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F0A4CF1DE2280597F0B07191 /* Pods_MySchedule.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8B0EC8ADDB660681B45F31E8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				49481AA14678A83867B5DA7F /* Pods-MySchedule.debug.xcconfig */,
+				56CDAB3FBD914A62855405FC /* Pods-MySchedule.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EF24B595289D20F700C937E0 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				EF24B596289D210F00C937E0 /* ScheduleModel.swift */,
+				EF24B59F289D734600C937E0 /* TaskModel.swift */,
+				EF24B5A3289DCD4800C937E0 /* ContactModel.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		EF24B598289D222100C937E0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EF24B599289D223300C937E0 /* RealmManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		EF6714182837E4B400BA13C2 = {
 			isa = PBXGroup;
 			children = (
 				EF6714232837E4B400BA13C2 /* MySchedule */,
 				EF6714222837E4B400BA13C2 /* Products */,
+				8B0EC8ADDB660681B45F31E8 /* Pods */,
+				0788117AE874E10725F3CDA2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +150,159 @@
 		EF6714232837E4B400BA13C2 /* MySchedule */ = {
 			isa = PBXGroup;
 			children = (
+				EF24B598289D222100C937E0 /* Services */,
+				EF8B7E88289A9BA700601ED1 /* Protocols */,
+				EF6714382837E8D900BA13C2 /* Application */,
+				EF6714392837E8E900BA13C2 /* Controllers */,
+				EF8B7E782899615C00601ED1 /* Models */,
+				EF8B7E80289A875100601ED1 /* Extensions */,
+				EF67143A2837E90600BA13C2 /* Resources */,
+			);
+			path = MySchedule;
+			sourceTree = "<group>";
+		};
+		EF6714382837E8D900BA13C2 /* Application */ = {
+			isa = PBXGroup;
+			children = (
 				EF6714242837E4B400BA13C2 /* AppDelegate.swift */,
 				EF6714262837E4B400BA13C2 /* SceneDelegate.swift */,
-				EF6714282837E4B400BA13C2 /* ViewController.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		EF6714392837E8E900BA13C2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EF6714282837E4B400BA13C2 /* MainTabBarController.swift */,
+				EF8B7E8B289A9EB500601ED1 /* Schedule */,
+				EF8B7E8C289A9EBB00601ED1 /* Tasks */,
+				EF8B7E8D289A9EC400601ED1 /* Contacts */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EF67143A2837E90600BA13C2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				EF67142D2837E4B600BA13C2 /* Assets.xcassets */,
 				EF67142F2837E4B600BA13C2 /* LaunchScreen.storyboard */,
 				EF6714322837E4B600BA13C2 /* Info.plist */,
 			);
-			path = MySchedule;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EF8B7E782899615C00601ED1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EF24B595289D20F700C937E0 /* Realm */,
+				EF8B7E96289BD89400601ED1 /* Alert */,
+				EF8B7E792899617000601ED1 /* Cell */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EF8B7E792899617000601ED1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EF8B7E94289AAFE600601ED1 /* HeaderAddTableViewCell.swift */,
+				EF8B7E92289AA5BD00601ED1 /* AddTableViewCell.swift */,
+				EF8B7E91289AA58B00601ED1 /* Tasks */,
+				EF8B7E90289AA57F00601ED1 /* Schedule */,
+				EF8B7EA9289C0D3000601ED1 /* Contacts */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EF8B7E80289A875100601ED1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EF8B7E81289A877000601ED1 /* UIKit */,
+				EF24B5A1289D7CD000C937E0 /* Date.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EF8B7E81289A877000601ED1 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				EF8B7E82289A878700601ED1 /* UIStackView.swift */,
+				EF8B7E84289A94D300601ED1 /* UILabel.swift */,
+				EF24B59B289D2DFA00C937E0 /* UIColor.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		EF8B7E88289A9BA700601ED1 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EF8B7E89289A9C1E00601ED1 /* TapButtonProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		EF8B7E8B289A9EB500601ED1 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				EF67143D2837EBA000BA13C2 /* ScheduleViewController.swift */,
+				EF8B7E8E289AA23A00601ED1 /* AddScheduleTableViewController.swift */,
+				EF8B7E9D289BFC7B00601ED1 /* ScheduleChooseColorTableViewController.swift */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		EF8B7E8C289A9EBB00601ED1 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				EF67143F2837EBBC00BA13C2 /* TasksViewController.swift */,
+				EF8B7EA3289C04D800601ED1 /* AddTaskTableViewController.swift */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
+		EF8B7E8D289A9EC400601ED1 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				EF6714412837EBD300BA13C2 /* ContactsViewController.swift */,
+				EF24B591289D09F700C937E0 /* AddContactTableViewController.swift */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		EF8B7E90289AA57F00601ED1 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				EF8B7E7A2899619C00601ED1 /* ScheduleTableViewCell.swift */,
+				EF8B7E9F289C02B800601ED1 /* ScheduleColorTableViewCell.swift */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		EF8B7E91289AA58B00601ED1 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				EF8B7E86289A96EF00601ED1 /* TasksTableViewCell.swift */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
+		EF8B7E96289BD89400601ED1 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				EF8B7E97289BD8A400601ED1 /* AlertDate.swift */,
+				EF8B7E99289BF5B300601ED1 /* AlertTime.swift */,
+				EF8B7E9B289BF81D00601ED1 /* AlertCellName.swift */,
+				EF24B593289D161C00C937E0 /* AlertPhotoCamera.swift */,
+				EF24B59D289D368700C937E0 /* AlertOk.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		EF8B7EA9289C0D3000601ED1 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				EF8B7EAA289C0D4200601ED1 /* ContactsTableViewCell.swift */,
+			);
+			path = Contacts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +312,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF6714352837E4B600BA13C2 /* Build configuration list for PBXNativeTarget "MySchedule" */;
 			buildPhases = (
+				BF9FE260259800B6A838C144 /* [CP] Check Pods Manifest.lock */,
 				EF67141D2837E4B400BA13C2 /* Sources */,
 				EF67141E2837E4B400BA13C2 /* Frameworks */,
 				EF67141F2837E4B400BA13C2 /* Resources */,
+				0DCDDDD23C8C44FF359F6056 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,14 +372,83 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0DCDDDD23C8C44FF359F6056 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MySchedule/Pods-MySchedule-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MySchedule/Pods-MySchedule-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MySchedule/Pods-MySchedule-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF9FE260259800B6A838C144 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MySchedule-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EF67141D2837E4B400BA13C2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF6714292837E4B400BA13C2 /* ViewController.swift in Sources */,
+				EF6714292837E4B400BA13C2 /* MainTabBarController.swift in Sources */,
+				EF8B7E9A289BF5B300601ED1 /* AlertTime.swift in Sources */,
+				EF24B592289D09F700C937E0 /* AddContactTableViewController.swift in Sources */,
+				EF8B7E7B2899619C00601ED1 /* ScheduleTableViewCell.swift in Sources */,
+				EF24B59E289D368700C937E0 /* AlertOk.swift in Sources */,
+				EF24B5A2289D7CD000C937E0 /* Date.swift in Sources */,
+				EF8B7E93289AA5BD00601ED1 /* AddTableViewCell.swift in Sources */,
+				EF24B5A0289D734600C937E0 /* TaskModel.swift in Sources */,
+				EF24B5A4289DCD4800C937E0 /* ContactModel.swift in Sources */,
+				EF8B7E8F289AA23A00601ED1 /* AddScheduleTableViewController.swift in Sources */,
+				EF8B7EA4289C04D800601ED1 /* AddTaskTableViewController.swift in Sources */,
+				EF8B7E98289BD8A400601ED1 /* AlertDate.swift in Sources */,
+				EF8B7E95289AAFE600601ED1 /* HeaderAddTableViewCell.swift in Sources */,
+				EF24B59C289D2DFA00C937E0 /* UIColor.swift in Sources */,
 				EF6714252837E4B400BA13C2 /* AppDelegate.swift in Sources */,
+				EF8B7E83289A878700601ED1 /* UIStackView.swift in Sources */,
+				EF8B7E9E289BFC7B00601ED1 /* ScheduleChooseColorTableViewController.swift in Sources */,
+				EF24B597289D210F00C937E0 /* ScheduleModel.swift in Sources */,
+				EF8B7EA0289C02B800601ED1 /* ScheduleColorTableViewCell.swift in Sources */,
+				EF8B7E85289A94D300601ED1 /* UILabel.swift in Sources */,
+				EF24B594289D161C00C937E0 /* AlertPhotoCamera.swift in Sources */,
+				EF6714402837EBBC00BA13C2 /* TasksViewController.swift in Sources */,
+				EF8B7EAB289C0D4200601ED1 /* ContactsTableViewCell.swift in Sources */,
+				EF8B7E8A289A9C1E00601ED1 /* TapButtonProtocols.swift in Sources */,
+				EF8B7E87289A96EF00601ED1 /* TasksTableViewCell.swift in Sources */,
 				EF6714272837E4B400BA13C2 /* SceneDelegate.swift in Sources */,
+				EF67143E2837EBA000BA13C2 /* ScheduleViewController.swift in Sources */,
+				EF24B59A289D223300C937E0 /* RealmManager.swift in Sources */,
+				EF8B7E9C289BF81D00601ED1 /* AlertCellName.swift in Sources */,
+				EF6714422837EBD300BA13C2 /* ContactsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +584,7 @@
 		};
 		EF6714362837E4B600BA13C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49481AA14678A83867B5DA7F /* Pods-MySchedule.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -279,7 +592,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 46CM9XJTAY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MySchedule/Info.plist;
+				INFOPLIST_FILE = MySchedule/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -300,6 +613,7 @@
 		};
 		EF6714372837E4B600BA13C2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56CDAB3FBD914A62855405FC /* Pods-MySchedule.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -307,7 +621,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 46CM9XJTAY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MySchedule/Info.plist;
+				INFOPLIST_FILE = MySchedule/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
