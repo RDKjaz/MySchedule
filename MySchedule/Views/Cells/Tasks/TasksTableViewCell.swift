@@ -9,7 +9,7 @@ import UIKit
 
 class TasksTableViewCell: UITableViewCell {
     
-    let number = UILabel(text: "Task Number")
+    let number = UILabel(text: "Task number")
     let desc = UILabel(text: "Description")
     
     let readyButton: UIButton = {

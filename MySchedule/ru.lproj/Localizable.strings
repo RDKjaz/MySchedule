@@ -1,0 +1,53 @@
+/* 
+  Localizable.strings
+  MySchedule
+
+  Created by Radik Gazetdinov on 10.08.2022.
+  
+*/
+
+"Schedule" = "Расписание";
+"Tasks" = "Задачи";
+"Contacts" = "Контакты";
+"Open calendar" = "Открыть календарь";
+"Close calendar" = "Закрыть календарь";
+"Add schedule" = "Добавить в расписание";
+"Add task" = "Добавить задачу";
+"Add contact" = "Добавить контакт";
+"Delete" = "Удалить";
+"DATE AND TIME" = "ДАТА И ВРЕМЯ";
+"INFORMATION" = "ИНФОРМАЦИЯ";
+"COLOR" = "ЦВЕТ";
+"IMPORTANT" = "ВАЖНО";
+"NAME" = "ИМЯ";
+"PHONE" = "ТЕЛЕФОН";
+"CHOOSE IMAGE" = "ВЫБЕРИТЕ ИЗОБРАЖЕНИЕ";
+"Choose color" = "Выбор цвета";
+"Date" = "Дата";
+"Time" = "Время";
+"Name" = "Наименование";
+"Enter name" = "Введите наименование";
+"Place" = "Место";
+"Enter place" = "Введите место";
+"Important" = "Важно ли";
+"Task number" = "Номер задачи";
+"Enter task number" = "Введите номер задачи";
+"Description" = "Описание";
+"Enter description" = "Введите описание";
+"Phone" = "Телефон";
+"Enter phone" = "Введите телефон";
+"Contact name" = "Имя контакта";
+"Enter contact name" = "Введите имя контакта";
+"RED" = "КРАСНЫЙ";
+"BLUE" = "СИНИЙ";
+"GREEN" = "ЗЕЛЕНЫЙ";
+"CANCEL" = "ОТМЕНА";
+"Succes saved" = "Успешно сохранено";
+"Date, time and name are required" = "Дата, время и наименование обязательны";
+"Date, number and description are required" = "Дата, номер и описание обязательны";
+"Name and phone are required" = "Имя и телефон обязательны";
+"Error" = "Ошибка";
+"Search" = "Поиск";
+"CAMERA" = "КАМЕРА";
+"LIBRARY" = "МЕДИАТЕКА";
+

@@ -12,8 +12,8 @@ class AddContactTableViewController: UITableViewController {
     private let idAddContactCell = "idAddContactCell"
     private let idAddContactHeader = "idAddContactHeader "
     
-    private let headerNameArray = ["NAME", "PHONE", "CHOOSE IMAGE"]
-    var cellNameArray = ["Name", "Phone", ""]
+    private let headerNameArray = [NSLocalizedString("NAME", comment: ""), NSLocalizedString("PHONE", comment: ""), NSLocalizedString("CHOOSE IMAGE", comment: "")]
+    var cellNameArray = [NSLocalizedString("Name", comment: ""), NSLocalizedString("Phone", comment: ""), ""]
     
     var imageIsChanged = false
     var isEditModel = false
@@ -23,7 +23,7 @@ class AddContactTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Add Contact"
+        title = NSLocalizedString("Add contact", comment: "")
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -40,15 +40,15 @@ class AddContactTableViewController: UITableViewController {
     
     @objc private func saveButtonTapped() {
         
-        if cellNameArray[0] == "Unknown" || cellNameArray[1] == "Unknown" {
-            alertOk(title: "Error", message: "Name and Phone are required")
+        if cellNameArray[0] == NSLocalizedString("Name", comment: "") || cellNameArray[1] == NSLocalizedString("Phone", comment: "") {
+            alertOk(title: NSLocalizedString("Error", comment: ""), message: NSLocalizedString("Name and phone are required", comment: ""))
         } else if isEditModel == false {
             setImageModel()
             setModel()
             RealmManager.shared.saveContactModel(model: contactModel)
             contactModel = ContactModel()
-            cellNameArray = ["Name", "Phone", ""]
-            alertOk(title: "Succes saved", message: nil)
+            cellNameArray = [NSLocalizedString("Name", comment: ""), NSLocalizedString("Phone", comment: ""), ""]
+            alertOk(title: NSLocalizedString("Succes saved", comment: ""), message: nil)
             tableView.reloadData()
         } else {
             setImageModel()
@@ -60,7 +60,7 @@ class AddContactTableViewController: UITableViewController {
     
     private func setModel() {
         contactModel.name = cellNameArray[0]
-        contactModel.name = cellNameArray[1]
+        contactModel.phone = cellNameArray[1]
         contactModel.avatar = dataImage
     }
     
@@ -70,10 +70,11 @@ class AddContactTableViewController: UITableViewController {
             let cell = tableView.cellForRow(at: [2,0]) as! AddTableViewCell
             
             let image = cell.backgroundViewCell.image
-            guard let imageData = image?.pngData() else { return }
-            dataImage = imageData
-            
-            cell.backgroundViewCell.contentMode = .scaleAspectFit
+            if image != UIImage(systemName: "person.fill.badge.plus") {
+                guard let imageData = image?.pngData() else { return }
+                dataImage = imageData
+                cell.backgroundViewCell.contentMode = .scaleAspectFit
+            }
             imageIsChanged = false
         } else {
             dataImage = nil
@@ -124,11 +125,11 @@ class AddContactTableViewController: UITableViewController {
         
         switch indexPath.section {
         case 0:
-            alertCellName(label: cell.nameCellLabel, name: "Contact Name", placeholder: "Enter Name") { text in
+            alertCellName(label: cell.nameCellLabel, name: NSLocalizedString("Contact name", comment: ""), placeholder: NSLocalizedString("Enter contact name", comment: "")) { text in
                 self.cellNameArray[0] = text
             }
         case 1:
-            alertCellName(label: cell.nameCellLabel, name: "Contact Phone", placeholder: "Enter Phone") { text in
+            alertCellName(label: cell.nameCellLabel, name: NSLocalizedString("Phone", comment: ""), placeholder: NSLocalizedString("Enter phone", comment: "")) { text in
                 self.cellNameArray[1] = text
             }
         case 2:

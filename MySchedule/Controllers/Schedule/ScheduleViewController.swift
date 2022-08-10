@@ -22,7 +22,7 @@ class ScheduleViewController: UIViewController {
     
     private let showHideButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Open calendar", for: .normal)
+        button.setTitle(NSLocalizedString("Open calendar", comment: ""), for: .normal)
         button.setTitleColor(.systemBlue, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -44,7 +44,7 @@ class ScheduleViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor(named: "backgroundColorUIViewController")
-        title = "Schedule"
+        title = NSLocalizedString("Schedule", comment: "")
                 
         calendar.delegate = self
         calendar.dataSource = self
@@ -83,10 +83,10 @@ class ScheduleViewController: UIViewController {
         
         if calendar.scope == .week {
             calendar.setScope(.month, animated: true)
-            showHideButton.setTitle("Close calendar", for: .normal)
+            showHideButton.setTitle(NSLocalizedString("Close calendar", comment: ""), for: .normal)
         } else {
             calendar.setScope(.week, animated: true)
-            showHideButton.setTitle("Open calendar", for: .normal)
+            showHideButton.setTitle(NSLocalizedString("Open calendar", comment: ""), for: .normal)
         }
     }
     
@@ -143,7 +143,7 @@ extension ScheduleViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let editingRow = scheduleArray[indexPath.row]
-        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { _, _, completionHandler in
+        let deleteAction = UIContextualAction(style: .destructive, title: NSLocalizedString("Delete", comment: "")) { _, _, completionHandler in
             RealmManager.shared.deleteScheduleModel(model: editingRow)
             tableView.reloadData()
         }

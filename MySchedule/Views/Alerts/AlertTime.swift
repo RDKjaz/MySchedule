@@ -31,7 +31,7 @@ extension UIViewController {
             label.text = timeString
         }
         
-        let cancel = UIAlertAction(title: "CANCEL", style: .default, handler: nil)
+        let cancel = UIAlertAction(title: NSLocalizedString("CANCEL", comment: ""), style: .default, handler: nil)
         
         alert.addAction(ok)
         alert.addAction(cancel)

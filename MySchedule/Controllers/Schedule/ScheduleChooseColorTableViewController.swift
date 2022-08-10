@@ -12,12 +12,12 @@ class ScheduleChooseColorTableViewController: UITableViewController {
     private let idScheduleChooseColorCell = "idScheduleChooseColorCell"
     private let idScheduleChooseColorHeader = "idScheduleChooseColorHeader"
     
-    private let headerNameArray = ["RED", "GREEN", "BLUE"]
+    private let headerNameArray = [NSLocalizedString("RED", comment: ""), NSLocalizedString("GREEN", comment: ""), NSLocalizedString("BLUE", comment: "")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Choose Color"
+        title = NSLocalizedString("Choose color", comment: "")
         
         tableView.delegate = self
         tableView.dataSource = self

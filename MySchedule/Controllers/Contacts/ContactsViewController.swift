@@ -38,9 +38,9 @@ class ContactsViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .white
-        title = "Contacts"
+        title = NSLocalizedString("Contacts", comment: "")
         
-        searchController.searchBar.placeholder = "Search"
+        searchController.searchBar.placeholder = NSLocalizedString("Search", comment: "")
         navigationItem.searchController = searchController
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
@@ -106,7 +106,7 @@ extension ContactsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
         let editingRow = contactsArray[indexPath.row]
-        let action = UIContextualAction(style: .destructive, title: "Delete") { _, _, completionHandler in
+        let action = UIContextualAction(style: .destructive, title: NSLocalizedString("Delete", comment: "")) { _, _, completionHandler in
             RealmManager.shared.deleteContactModel(model: editingRow)
             tableView.reloadData()
         }

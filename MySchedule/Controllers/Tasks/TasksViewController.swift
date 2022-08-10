@@ -22,7 +22,7 @@ class TasksViewController: UIViewController {
     
     private let showHideButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Open calendar", for: .normal)
+        button.setTitle(NSLocalizedString("Open calendar", comment: ""), for: .normal)
         button.setTitleColor(.systemBlue, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -44,7 +44,7 @@ class TasksViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor(named: "backgroundColorUIViewController")
-        title = "Tasks"
+        title = NSLocalizedString("Tasks", comment: "")
         
         calendar.delegate = self
         calendar.dataSource = self
@@ -79,10 +79,10 @@ class TasksViewController: UIViewController {
         
         if calendar.scope == .week {
             calendar.setScope(.month, animated: true)
-            showHideButton.setTitle("Close calendar", for: .normal)
+            showHideButton.setTitle(NSLocalizedString("Close calendar", comment: ""), for: .normal)
         } else {
             calendar.setScope(.week, animated: true)
-            showHideButton.setTitle("Open calendar", for: .normal)
+            showHideButton.setTitle(NSLocalizedString("Open calendar", comment: ""), for: .normal)
         }
     }
     
@@ -142,7 +142,7 @@ extension TasksViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let editingRow = tasksArray[indexPath.row]
-        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { _, _, completionHandler in
+        let deleteAction = UIContextualAction(style: .destructive, title: NSLocalizedString("Delete", comment: "")) { _, _, completionHandler in
             RealmManager.shared.deleteTaskModel(model: editingRow)
             tableView.reloadData()
         }

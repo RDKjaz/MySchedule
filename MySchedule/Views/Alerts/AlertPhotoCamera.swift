@@ -13,19 +13,19 @@ extension UIViewController {
         
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
-        let camera = UIAlertAction(title: "Camera", style: .default) { _ in
+        let camera = UIAlertAction(title: NSLocalizedString("CAMERA", comment: ""), style: .default) { _ in
             
             let camera = UIImagePickerController .SourceType.camera
             completionHandler(camera)
         }
         
-        let photoLibrary = UIAlertAction(title: "Library", style: .default) { _ in
+        let photoLibrary = UIAlertAction(title: NSLocalizedString("LIBRARY", comment: ""), style: .default) { _ in
             
             let photoLibrary = UIImagePickerController.SourceType.photoLibrary
             completionHandler(photoLibrary)
         }
         
-        let cancel = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+        let cancel = UIAlertAction(title: NSLocalizedString("CANCEL", comment: ""), style: .default, handler: nil)
         
         alert.addAction(camera)
         alert.addAction(photoLibrary)

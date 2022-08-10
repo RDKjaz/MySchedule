@@ -13,8 +13,8 @@ class AddScheduleTableViewController: UITableViewController {
     private let idAddScheduleCell = "idAddScheduleCell"
     private let idAddScheduleHeader = "idAddScheduleHeader"
     
-    private let headerNameArray = ["DATE AND TIME", "INFORMATION", "COLOR", "IMPORTANT"]
-    private let cellNameArray = [["Date", "Time"], ["Name", "Place"], [""], ["Important"]]
+    private let headerNameArray = [NSLocalizedString("DATE AND TIME", comment: ""), NSLocalizedString("INFORMATION", comment: ""), NSLocalizedString("COLOR", comment: ""), NSLocalizedString("IMPORTANT", comment: ""),]
+    private let cellNameArray = [[NSLocalizedString("Date", comment: ""), NSLocalizedString("Time", comment: "")], [NSLocalizedString("Name", comment: ""), NSLocalizedString("Place", comment: "")], [""], [NSLocalizedString("Important", comment: "")]]
     
     private var scheduleModel = ScheduleModel()
     
@@ -23,7 +23,7 @@ class AddScheduleTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Add Schedule"
+        title = NSLocalizedString("Add schedule", comment: "")
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -39,13 +39,13 @@ class AddScheduleTableViewController: UITableViewController {
     @objc private func saveButtonTapped() {
         
         if scheduleModel.date == nil || scheduleModel.time == nil || scheduleModel.name == "Unknown" {
-            alertOk(title: "Error", message: "Date, Time and Name are required")
+            alertOk(title: NSLocalizedString("Error", comment: ""), message: NSLocalizedString("Date, time and name are required", comment: ""))
         } else {
             scheduleModel.color = hexColorCell
             RealmManager.shared.saveScheduleModel(model: scheduleModel)
             scheduleModel = ScheduleModel()
             //tableView.reloadRows(at: [[0,0], [0,1], [1,0], [1,1], [2,0], [3,0]], with: .none)
-            alertOk(title: "Succes saved", message: nil)
+            alertOk(title: NSLocalizedString("Succes saved", comment: ""), message: nil)
             hexColorCell = "4D54CB"
             tableView.reloadData()
         }
@@ -102,11 +102,11 @@ class AddScheduleTableViewController: UITableViewController {
                 self.scheduleModel.time = time
             }
         case [1,0]:
-            alertCellName(label: cell.nameCellLabel, name: "Task Name", placeholder: "Enter Task") { text in
+            alertCellName(label: cell.nameCellLabel, name: NSLocalizedString("Name", comment: ""), placeholder: NSLocalizedString("Enter Name", comment: "")) { text in
                 self.scheduleModel.name = text
             }
         case [1,1]:
-            alertCellName(label: cell.nameCellLabel, name: "Place", placeholder: "Enter Place") { text in
+            alertCellName(label: cell.nameCellLabel, name: NSLocalizedString("Place", comment: ""), placeholder: NSLocalizedString("Enter place", comment: "")) { text in
                 self.scheduleModel.place = text
             }
         case [2,0]:
