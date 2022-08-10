@@ -13,10 +13,12 @@ class AddContactTableViewController: UITableViewController {
     private let idAddContactHeader = "idAddContactHeader "
     
     private let headerNameArray = ["NAME", "PHONE", "CHOOSE IMAGE"]
-    private let cellNameArray = ["Name", "Phone", ""]
+    var cellNameArray = ["Name", "Phone", ""]
     
-    private var imageIsChanged = false
-    private var contactModel = ContactModel()
+    var imageIsChanged = false
+    var isEditModel = false
+    var dataImage: Data?
+    var contactModel = ContactModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,20 +34,34 @@ class AddContactTableViewController: UITableViewController {
         tableView.register(HeaderAddTableViewCell.self, forHeaderFooterViewReuseIdentifier: idAddContactHeader)
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveButtonTapped))
+        
+        print(contactModel)
     }
     
     @objc private func saveButtonTapped() {
         
-        if contactModel.name == "Unknown" || contactModel.name == "Unknown" {
+        if cellNameArray[0] == "Unknown" || cellNameArray[1] == "Unknown" {
             alertOk(title: "Error", message: "Name and Phone are required")
+        } else if isEditModel == false {
+            setImageModel()
+            setModel()
+            RealmManager.shared.saveContactModel(model: contactModel)
+            contactModel = ContactModel()
+            cellNameArray = ["Name", "Phone", ""]
+            alertOk(title: "Succes saved", message: nil)
+            tableView.reloadData()
         } else {
             setImageModel()
             
-            RealmManager.shared.saveContactModel(model: contactModel)
-            contactModel = ContactModel()
-            alertOk(title: "Succes saved", message: nil)
-            tableView.reloadData()
+            RealmManager.shared.upadateContactModel(model: contactModel, nameArray: cellNameArray, imageData: dataImage)
+            self.navigationController?.popViewController(animated: true)
         }
+    }
+    
+    private func setModel() {
+        contactModel.name = cellNameArray[0]
+        contactModel.name = cellNameArray[1]
+        contactModel.avatar = dataImage
     }
     
     private func setImageModel() {
@@ -55,12 +71,12 @@ class AddContactTableViewController: UITableViewController {
             
             let image = cell.backgroundViewCell.image
             guard let imageData = image?.pngData() else { return }
-            contactModel.avatar = imageData
+            dataImage = imageData
             
             cell.backgroundViewCell.contentMode = .scaleAspectFit
             imageIsChanged = false
         } else {
-            contactModel.avatar = nil
+            dataImage = nil
         }
     }
     
@@ -75,7 +91,15 @@ class AddContactTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: idAddContactCell, for: indexPath) as! AddTableViewCell
-        cell.cellContactsConfigure(nameArray: cellNameArray, indexPath: indexPath)
+        
+        if isEditModel == false {
+            cell.cellContactsConfigure(nameArray: cellNameArray, indexPath: indexPath, image: nil)
+        } else if let data = contactModel.avatar, let image = UIImage(data: data) {
+            cell.cellContactsConfigure(nameArray: cellNameArray, indexPath: indexPath, image: image)
+        } else {
+            cell.cellContactsConfigure(nameArray: cellNameArray, indexPath: indexPath, image: nil)
+        }
+        
         return cell
     }
         
@@ -101,11 +125,11 @@ class AddContactTableViewController: UITableViewController {
         switch indexPath.section {
         case 0:
             alertCellName(label: cell.nameCellLabel, name: "Contact Name", placeholder: "Enter Name") { text in
-                self.contactModel.name = text
+                self.cellNameArray[0] = text
             }
         case 1:
             alertCellName(label: cell.nameCellLabel, name: "Contact Phone", placeholder: "Enter Phone") { text in
-                self.contactModel.phone = text
+                self.cellNameArray[1] = text
             }
         case 2:
             alertPhotoCamera { [self] source in

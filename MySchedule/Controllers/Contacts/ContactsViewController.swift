@@ -53,7 +53,7 @@ class ContactsViewController: UIViewController {
         
         setConstraints()
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -64,6 +64,16 @@ class ContactsViewController: UIViewController {
     @objc private func addButtonTapped() {
         
         let vc = AddContactTableViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc private func editContact(contact: ContactModel) {
+        
+        let vc = AddContactTableViewController()
+        vc.contactModel = contact
+        vc.cellNameArray = [contact.name, contact.phone, ""]
+        vc.isEditModel =  true
+        vc.imageIsChanged = true
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -102,6 +112,11 @@ extension ContactsViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         return UISwipeActionsConfiguration(actions: [action])
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let contact = contactsArray[indexPath.row]
+        editContact(contact: contact)
     }
 }
 

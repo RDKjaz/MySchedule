@@ -11,15 +11,17 @@ class AddTableViewCell: UITableViewCell {
     
     let backgroundViewCell: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .white
+        imageView.backgroundColor = UIColor(named: "backgroundColorAddTableViewCell")
         imageView.layer.cornerRadius = 10
         imageView.contentMode = .scaleAspectFit
+        imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
     let nameCellLabel: UILabel = {
         let label = UILabel()
+        label.textColor = UIColor(named: "labelColor")
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -58,7 +60,7 @@ class AddTableViewCell: UITableViewCell {
         nameCellLabel.text = nameArray[indexPath.section][indexPath.row]
         
         let color = UIColor().colorFromHex(hexColor)
-        backgroundViewCell.backgroundColor = (indexPath.section == 2 ? color : .white)
+        backgroundViewCell.backgroundColor = (indexPath.section == 2 ? color : UIColor(named: "backgroundColorAddTableViewCell"))
         
         isImportantSwitch.isHidden = indexPath == [3,0] ? false : true
         isImportantSwitch.onTintColor = color
@@ -69,11 +71,16 @@ class AddTableViewCell: UITableViewCell {
         nameCellLabel.text = nameArray[indexPath.section][indexPath.row]
     }
     
-    func cellContactsConfigure(nameArray: [String], indexPath: IndexPath) {
+    func cellContactsConfigure(nameArray: [String], indexPath: IndexPath, image: UIImage?) {
         
         nameCellLabel.text = nameArray[indexPath.section]
+        if image == nil {
+            indexPath.section == 2 ? backgroundViewCell.image = UIImage(systemName: "person.fill.badge.plus") : nil
+        } else {
+            indexPath.section == 2 ? backgroundViewCell.image = image : nil
+            backgroundViewCell.contentMode = .scaleAspectFill
+        }
         
-        indexPath.section == 2 ? backgroundViewCell.image = UIImage(systemName: "person.fill.badge.plus") : nil
     }
     
     func setConstraints() {

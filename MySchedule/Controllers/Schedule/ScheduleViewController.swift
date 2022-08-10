@@ -15,6 +15,7 @@ class ScheduleViewController: UIViewController {
     
     private var calendar: FSCalendar = {
         let calendar = FSCalendar()
+        calendar.backgroundColor = UIColor(named: "backgroundColorCalendar")
         calendar.translatesAutoresizingMaskIntoConstraints = false
         return calendar
     }()
@@ -42,7 +43,7 @@ class ScheduleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor(named: "backgroundColorUIViewController")
         title = "Schedule"
                 
         calendar.delegate = self

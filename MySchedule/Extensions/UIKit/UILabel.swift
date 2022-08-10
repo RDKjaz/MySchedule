@@ -11,7 +11,7 @@ extension UILabel {
     convenience init(text: String) {
         self.init()
         self.text = text
-        self.textColor = .black
+        self.textColor = UIColor(named: "labelColor")
         self.translatesAutoresizingMaskIntoConstraints = false
     }
 }

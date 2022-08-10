@@ -129,6 +129,15 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		EF2A3F6A28A39F3C005A7EC1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EF8B7E96289BD89400601ED1 /* Alerts */,
+				EF8B7E792899617000601ED1 /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		EF6714182837E4B400BA13C2 = {
 			isa = PBXGroup;
 			children = (
@@ -150,9 +159,10 @@
 		EF6714232837E4B400BA13C2 /* MySchedule */ = {
 			isa = PBXGroup;
 			children = (
-				EF24B598289D222100C937E0 /* Services */,
-				EF8B7E88289A9BA700601ED1 /* Protocols */,
 				EF6714382837E8D900BA13C2 /* Application */,
+				EF24B598289D222100C937E0 /* Services */,
+				EF2A3F6A28A39F3C005A7EC1 /* Views */,
+				EF8B7E88289A9BA700601ED1 /* Protocols */,
 				EF6714392837E8E900BA13C2 /* Controllers */,
 				EF8B7E782899615C00601ED1 /* Models */,
 				EF8B7E80289A875100601ED1 /* Extensions */,
@@ -195,13 +205,11 @@
 			isa = PBXGroup;
 			children = (
 				EF24B595289D20F700C937E0 /* Realm */,
-				EF8B7E96289BD89400601ED1 /* Alert */,
-				EF8B7E792899617000601ED1 /* Cell */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		EF8B7E792899617000601ED1 /* Cell */ = {
+		EF8B7E792899617000601ED1 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				EF8B7E94289AAFE600601ED1 /* HeaderAddTableViewCell.swift */,
@@ -210,7 +218,7 @@
 				EF8B7E90289AA57F00601ED1 /* Schedule */,
 				EF8B7EA9289C0D3000601ED1 /* Contacts */,
 			);
-			path = Cell;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		EF8B7E80289A875100601ED1 /* Extensions */ = {
@@ -285,7 +293,7 @@
 			path = Tasks;
 			sourceTree = "<group>";
 		};
-		EF8B7E96289BD89400601ED1 /* Alert */ = {
+		EF8B7E96289BD89400601ED1 /* Alerts */ = {
 			isa = PBXGroup;
 			children = (
 				EF8B7E97289BD8A400601ED1 /* AlertDate.swift */,
@@ -294,7 +302,7 @@
 				EF24B593289D161C00C937E0 /* AlertPhotoCamera.swift */,
 				EF24B59D289D368700C937E0 /* AlertOk.swift */,
 			);
-			path = Alert;
+			path = Alerts;
 			sourceTree = "<group>";
 		};
 		EF8B7EA9289C0D3000601ED1 /* Contacts */ = {
