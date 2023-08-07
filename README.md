@@ -1,4 +1,5 @@
 # Schedule iOS App
+Application schedule with tasks and contacts
 
 ## Stack
 - iOS 14.0+  
